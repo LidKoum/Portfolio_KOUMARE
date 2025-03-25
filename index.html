@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <!-- Inclusion des polices Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Inclusion du fichier CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#a-propos">À propos</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#interets">Centres d’intérêts</a></li>
+                <li><a href="#sports">Activités sportives</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenu principal -->
+    <main>
+        <!-- Section Accueil -->
+        <section id="accueil">
+            <div class="hero">
+                <h1>[Nom] [Prénom]</h1>
+                <p>Je suis [Prénom], Développeur en devenir passionné par le web et le design !</p>
+                <a href="#projets" class="btn">Voir mes projets</a>
+            </div>
+        </section>
+
+        <!-- Section À propos -->
+        <section id="a-propos">
+            <h2>À propos</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Je m’appelle [Nom], passionné par la création de sites web modernes et interactifs.</p>
+                    <p>Je suis actuellement étudiant(e) en développement web, et je cherche à améliorer mes compétences en JavaScript, HTML et CSS.</p>
+                    <p>J’adore transformer mes idées en projets concrets et expérimenter avec les nouvelles technologies.</p>
+                    <a href="path/to/your-cv.pdf" class="btn" download>Télécharger mon CV</a>
+                </div>
+                <div class="about-image">
+                    <img src="images/profil.jpg" alt="Photo de [Nom]">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Compétences -->
+        <section id="competences">
+            <h2>Compétences</h2>
+            <ul>
+                <li>HTML5 - 90%</li>
+                <li>CSS3 - 85%</li>
+                <li>JavaScript - 80%</li>
+                <li>Responsive Design - 75%</li>
+                <li>Git & GitHub - 70%</li>
+            </ul>
+        </section>
+
+        <!-- Section Projets (avec filtres) -->
+        <section id="projets">
+            <h2>Mes projets</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="html">HTML</button>
+                <button class="filter-btn" data-filter="css">CSS</button>
+                <button class="filter-btn" data-filter="javascript">JavaScript</button>
+            </div>
+            <div class="projects-grid">
+                <article class="project-card" data-tags="html css javascript">
+                    <h3>Mini-jeu interactif</h3>
+                    <p>Un mini-jeu interactif en JavaScript qui utilise des événements DOM.</p>
+                    <p><strong>Technologies :</strong> HTML, CSS, JS</p>
+                    <a href="#" class="btn">Voir</a>
+                </article>
+                <article class="project-card" data-tags="html css javascript">
+                    <h3>Application de liste de tâches</h3>
+                    <p>Application web pour gérer des tâches avec stockage local.</p>
+                    <p><strong>Technologies :</strong> HTML, CSS, JavaScript (LocalStorage)</p>
+                    <a href="#" class="btn">Voir</a>
+                </article>
+                <article class="project-card" data-tags="html css javascript">
+                    <h3>Portfolio personnel</h3>
+                    <p>Ce portfolio dynamique avec sections interactives.</p>
+                    <p><strong>Technologies :</strong> HTML, CSS, JavaScript</p>
+                    <a href="#" class="btn">Voir</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section Centres d’intérêts -->
+        <section id="interets">
+            <h2>Centres d’intérêts</h2>
+            <ul>
+                <li>Voyage : Découverte de nouvelles cultures.</li>
+                <li>Photographie : Paysages et portraits.</li>
+                <li>Lecture : Romans de science-fiction.</li>
+            </ul>
+        </section>
+
+        <!-- Section Activités sportives -->
+        <section id="sports">
+            <h2>Activités sportives</h2>
+            <ul>
+                <li>Course à pied : Participe à des semi-marathons.</li>
+                <li>Natation : Pratique régulière.</li>
+                <li>Yoga : Pour la relaxation et la concentration.</li>
+            </ul>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <form id="formContact">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+                <span class="error-message" id="nom-error"></span>
+                
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error-message" id="email-error"></span>
+                
+                <label for="sujet">Sujet :</label>
+                <input type="text" id="sujet" name="sujet" required>
+                <span class="error-message" id="sujet-error"></span>
+                
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <span class="error-message" id="message-error"></span>
+                
+                <button type="submit" class="btn">Envoyer</button>
+                <span class="success-message" id="form-success"></span>
+            </form>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>© 2025 [Nom] [Prénom]. Tous droits réservés.</p>
+        <p>Contact : [ton email] | <a href="https://linkedin.com">LinkedIn</a> | <a href="https://github.com">GitHub</a></p>
+    </footer>
+
+    <!-- Bouton Retour en haut -->
+    <a href="#accueil" class="scroll-top">↑</a>
+
+    <!-- Inclusion du fichier JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
